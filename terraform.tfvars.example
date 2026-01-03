@@ -1,0 +1,27 @@
+# Exemple de fichier terraform.tfvars
+# Copiez ce fichier et renommez-le en "terraform.tfvars"
+# Puis modifiez les valeurs selon votre configuration
+
+# Région AWS (ne pas changer pour AWS Academy)
+aws_region = "us-east-1"
+
+# Nom du projet
+project_name = "zabbix-monitoring"
+
+# IMPORTANT: Votre IP publique pour l'accès SSH/RDP
+# Format: x.x.x.x/32
+# Trouvez votre IP sur: https://www.whatismyip.com/
+my_ip = "YOUR_PUBLIC_IP/32"  # REMPLACEZ PAR VOTRE IP
+
+# IMPORTANT: Nom de votre Key Pair AWS
+# Créez-la d'abord dans AWS Console: EC2 > Key Pairs
+key_name = "YOUR_KEY_PAIR_NAME"  # REMPLACEZ PAR VOTRE KEY PAIR
+
+# Types d'instances (ne pas dépasser t3.large pour AWS Academy)
+zabbix_instance_type = "t3.large"
+linux_client_instance_type = "t3.medium"
+windows_client_instance_type = "t3.large"
+
+# Configuration réseau (optionnel - valeurs par défaut)
+# vpc_cidr = "10.0.0.0/16"
+# public_subnet_cidr = "10.0.1.0/24"
